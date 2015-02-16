@@ -71,11 +71,6 @@ RUN mkdir $HOME/workspace
 
 USER root
 
-ADD ssh/config $HOME/.ssh/config
-RUN \
-  chmod 600 $HOME/.ssh/config && \
-  chown dev $HOME/.ssh/config
-
 VOLUME $HOME/workspace
 
 EXPOSE 22 
